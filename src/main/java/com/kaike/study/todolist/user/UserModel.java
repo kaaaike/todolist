@@ -19,10 +19,11 @@ public class UserModel {
     @GeneratedValue(generator = "UUID")
     private UUID id;
 
-    @Column(unique = true) // Define que não será possível criar users duplicados
+    @Column(unique = true) // Define que não será possível criar username duplicados
     public String username;
     public String name;
     public String password;
+    @Column(unique = true) // Define que não será possível criar e-mails duplicados
     public String mail;
 
     @CreationTimestamp
